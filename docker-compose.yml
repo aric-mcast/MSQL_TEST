@@ -22,7 +22,7 @@ services:
     depends_on:
       - db
     volumes:
-      wordpress:/var/www/html
+      - wordpress:/var/www/html
     restart: always
     environment:
       WORDPRESS_DB_HOST: db:3306
@@ -50,8 +50,8 @@ services:
       - web
     command: certonly --webroot --webroot-path=/var/www/html --email aric.dev@mcast.edu.mt --agree-tos --no-eff-email -d test.aric-mcast.dev
     volumes:
-        - certbotdata:/etc/letsencrypt
-        - wordpress:/var/www/html
+      - certbotdata:/etc/letsencrypt
+      - wordpress:/var/www/html
 
 volumes:
   wordpress:
