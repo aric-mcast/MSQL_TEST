@@ -38,7 +38,7 @@ services:
       - wordpress
     volumes:
       - wordpress:/var/www/html
-      - ./nginx.conf:/etc/nginx/conf.d/
+      - ./conf.d:/etc/nginx/conf.d/
       - certbotdata:/etc/letsencrypt
     ports:
       - 80:80

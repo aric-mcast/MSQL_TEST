@@ -15,14 +15,14 @@ server {
 server {
   listen 443 ssl http2;
   listen [::]:443 ssl http2;
-  server_name domain.com www.domain.com;
+  server_name test.aric-mcast.dev;
   index index.php index.html index.htm;
   root /var/www/html;
   server_tokens off;
-  # add our paths for the certificates Certbot created 
+
   ssl_certificate /etc/letsencrypt/live/test.aric-mcast.dev/fullchain.pem;
   ssl_certificate_key /etc/letsencrypt/live/test.aric-mcast.dev/privkey.pem;
-  # some security headers ( optional )
+
  add_header X-Frame-Options "SAMEORIGIN" always;
  add_header X-XSS-Protection "1; mode=block" always;
  add_header X-Content-Type-Options "nosniff" always;
