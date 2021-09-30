@@ -54,6 +54,6 @@ services:
         - wordpress:/var/www/html
 
 volumes:
-  wordpress: {}
-  dbdata: {}
-  certbotdata: {}
+  wordpress:
+  dbdata:
+  certbotdata:
