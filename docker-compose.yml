@@ -1,16 +1,10 @@
 version: '3.8'
 
 services:
-  web:
+  db:
     image: mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: "bazena##000!"
     ports:
       - 3306:3306
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
